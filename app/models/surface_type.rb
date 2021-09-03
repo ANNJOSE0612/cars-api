@@ -1,0 +1,2 @@
+class SurfaceType < ApplicationRecord
+end
