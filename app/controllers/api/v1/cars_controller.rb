@@ -8,6 +8,6 @@ class Api::V1::CarsController < ApplicationController
     private
 
         def set_car
-            @car = Car.find(params[:id])
+            @car = Car.friendly.find(params[:id])
         end
 end
