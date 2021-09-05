@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_04_123640) do
+ActiveRecord::Schema.define(version: 2021_09_05_183631) do
 
   create_table "cars", force: :cascade do |t|
     t.string "name"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 2021_09_04_123640) do
     t.integer "surface_type_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_tracks_on_slug", unique: true
   end
 
 end
